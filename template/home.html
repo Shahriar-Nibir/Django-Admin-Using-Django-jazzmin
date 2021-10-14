@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .init{
+        background-color: #577ad8;
+        border: none !important;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+</style>
+
+<div class="col-12 d-flex justify-content-center align-items-center mt-3">
+    <a href="{% url 'password' %}" class='btn btn-primary mx-1 px-5 py-2 init'>Using Password</a>
+    <a href="{% url 'otp' %}" class='btn btn-primary mx-1 px-5 py-2 init'>Using OTP</a>
+</div>
+{% endblock %}

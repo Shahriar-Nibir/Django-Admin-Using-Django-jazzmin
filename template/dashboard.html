@@ -1,0 +1,12 @@
+{% extends 'test.html' %}
+{% load static %}
+{% block content %}
+    {% for pa in page %}
+        {% for p in pa %}
+        <div class="col-12 border mt-5 py-3 px-4">
+            <h2>{{p.name}}</h2>
+            <p>{{p.content|safe}}</p>
+        </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}

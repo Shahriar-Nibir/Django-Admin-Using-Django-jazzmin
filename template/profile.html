@@ -1,0 +1,24 @@
+{% extends 'test.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .any{
+        border:3px solid #cccbcb;
+        border-radius: 10px;
+    }
+</style>
+<div class="row mt-5">
+    <div class="col-4">
+        <img src="{{ user.profile_pic.url }}" alt="" height='250px' width='250px' class='any'>
+    </div>
+    <div class="col-6">
+        <ul class='list-group list-group-flush'>
+            <li class='list-group-item'><strong>Username:</strong>  {{user.username}}</li>
+            <li class='list-group-item'><strong>Email:</strong> {{user.email}}</li>
+            <li class='list-group-item'><strong>First Name:</strong> {{user.first_name}}</li>
+            <li class='list-group-item'> <strong>Last Name:</strong>  {{user.last_name}}</li>
+            <li class='list-group-item'><strong>Contact No:</strong> {{user.contact_no}}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

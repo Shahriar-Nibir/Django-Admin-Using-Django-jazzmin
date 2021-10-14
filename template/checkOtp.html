@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .init{
+        background-color: #577ad8;
+        border: none !important;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+        width:100%;
+    }
+    .none{
+        text-decoration: none;
+        color:rgb(59, 58, 58);
+    }
+    .none:hover{
+        text-decoration: none;
+        color:rgb(59, 58, 58);
+    }
+</style>
+
+<div class="col-12 text-center">
+    <p>
+        Using OTP
+        <br>
+        <a href="{% url 'password' %}" class='none'>(Change to Password)</a>
+    </p>
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center">
+    <form method='POST' action='' class='col-8'>
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputEmail1">OTP</label>
+          <input type="otp" class="form-control" id="exampleInputUsername1" aria-describedby="usernameHelp" placeholder="OTP" name='otp'>
+        </div>  
+        {% for m in messages %}
+            <div class="text-danger">{{m}}</div>
+        {% endfor %}      
+        <button type="submit" class="btn btn-primary init mt-4">Sign in</button>
+      </form>
+</div>
+{% endblock %}
