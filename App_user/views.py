@@ -165,7 +165,7 @@ def logoutEach(request, pk):
         s.delete()
     except:
         pass
-    return redirect('http://127.0.0.1:8000/admin/system/sessiondetail/')
+    return redirect('http://relayportal.herokuapp.com/relayportal/admin/system/sessiondetail/')
 
 
 @login_required(login_url='home')

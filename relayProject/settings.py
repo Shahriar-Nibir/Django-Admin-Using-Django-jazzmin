@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-e@!!5py$+q60n@psqz88443rz!vf3e#@&ifyesce3w$x!2zlck
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['relayportal.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -91,10 +91,20 @@ IMPORT_EXPORT_USE_TRANSACTIONS = True
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd45lo2of1plhi2',
+        'USER': 'yjoithhsdwzydp',
+        'PASSWORD': '798c3d7eb151f0f8e0db48078e10c7eed752bfad7905842c82754a6b53c46ae6',
+        'HOST': 'ec2-3-225-79-57.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
