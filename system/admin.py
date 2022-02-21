@@ -51,4 +51,4 @@ class SessionAdmin(admin.ModelAdmin):
 admin.site.register(Session, SessionAdmin)
 
 admin.site.register(Staff, StaffAdmin)
-# admin.site.register(Account)
+admin.site.register(Account)
